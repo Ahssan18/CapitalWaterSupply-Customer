@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SignUpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please Enter Your Credentials"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            />
+        <EditText
+            android:id="@+id/edtSignUpName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Name"
+            android:layout_marginTop="50dp"
+            android:imeOptions="actionNext"
+            android:textColor="@android:color/black"/>
+        <EditText
+            android:id="@+id/edtSignUpEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email"
+            android:layout_below="@id/edtSignUpName"
+            android:layout_marginTop="5dp"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/black"/>
+        <EditText
+            android:id="@+id/edtSignUpPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password"
+            android:layout_marginTop="5dp"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:layout_below="@id/edtSignUpEmail"
+            android:textColor="@android:color/black"/>
+        <EditText
+            android:id="@+id/edtSignUpCPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:layout_marginTop="5dp"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:layout_below="@id/edtSignUpPassword"
+            android:textColor="@android:color/black"/>
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Sign Up"
+            android:layout_below="@id/edtSignUpCPassword"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_shape_btn"
+            android:textColor="@color/white"
+            />
+        <ProgressBar
+            android:id="@+id/signUpPB"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tvSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? SignIn"
+            android:layout_below="@id/btnSignUp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+</RelativeLayout>

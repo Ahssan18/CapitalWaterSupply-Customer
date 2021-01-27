@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="3dp"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="20dp"
+            app:cardCornerRadius="10dp"
+            android:layout_centerVertical="true"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="1dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvOrderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Id"
+                        android:textSize="14sp"
+                        android:layout_marginStart="3dp"
+                        android:textColor="@android:color/black"/>
+                    <TextView
+                        android:id="@+id/tvOrderTankerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tanker Name"
+                        android:textSize="14sp"
+                        android:layout_marginStart="3dp"
+                        android:layout_below="@+id/tvOrderId"
+                        android:textColor="@android:color/black"/>
+                    <TextView
+                        android:id="@+id/tvOrderTankerType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tanker Type"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        android:layout_marginStart="5dp"
+                        android:layout_below="@id/tvOrderId"
+                        android:layout_toRightOf="@id/tvOrderTankerName"
+                        android:layout_centerHorizontal="true"
+                        />
+                    <TextView
+                        android:id="@+id/tvOrderQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quantity"
+                        android:textSize="12sp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_below="@id/tvOrderTankerName"
+                        />
+                    <TextView
+                        android:id="@+id/tvOrderUnitPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unit Price"
+                        android:textSize="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_below="@id/tvOrderTankerName"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvOrderPhoneNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone Number"
+                        android:textSize="12sp"
+                        android:layout_below="@id/tvOrderQuantity"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="15dp"
+                        />
+                    <TextView
+                        android:id="@+id/tvOrderStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Status"
+                        android:textSize="12sp"
+                        android:layout_below="@id/tvOrderQuantity"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:layout_marginEnd="15dp"
+                        />
+                    <TextView
+                        android:id="@+id/tvOrderAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:textSize="12sp"
+                        android:layout_below="@id/tvOrderPhoneNumber"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="15dp"
+                        />
+                    <TextView
+                        android:id="@+id/tvOrderTotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Price"
+                        android:textSize="12sp"
+                        android:layout_below="@id/tvOrderAddress"
+                        android:layout_alignParentRight="false"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="15dp"
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

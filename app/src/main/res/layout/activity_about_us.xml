@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:layout_height="match_parent"
+    tools:context=".AboutUsActivity">
+    <FrameLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/white" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="About Us"/>
+    </FrameLayout>
+
+    <ScrollView
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Our Other Services"
+                android:textStyle="bold"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="1 : Rent A Car"
+                android:textStyle="bold"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="2 : Water Tank Cleaning "
+                android:textStyle="bold"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:text="Our Online Paymnt Accounts: "
+                android:textStyle="bold"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Customer Service: 03334050857"
+                android:textStyle="bold"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="03007743968"
+                android:textStyle="bold"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:text="Jazz Cash : 03334050857"
+                android:textStyle="bold"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="HBL Bank Account : 08027900643103"
+                android:textStyle="bold"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:text="Address: Soan Garden Islamabad,Pakistan"
+                android:textStyle="bold"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
