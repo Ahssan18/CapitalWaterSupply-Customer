@@ -1,5 +1,6 @@
 package com.mazy.capitalwatersupplycustomer.activities
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -26,10 +27,12 @@ class OrderFormActivity : AppCompatActivity() {
     val addressList : ArrayList<String> = arrayListOf()
     val CAddressList : ArrayList<Addresses> = arrayListOf()
     val quantityList :ArrayList<String> = arrayListOf()
+//    val sharedPreference = getSharedPreferences("PREFERENCE_NAME", MODE_PRIVATE)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order_form)
         val toolbar= supportActionBar
+
         toolbar?.title  = "Order Details"
         toolbar?.setDisplayHomeAsUpEnabled(true)
         OrderProgressDialog.visibility = View.VISIBLE
@@ -70,7 +73,7 @@ class OrderFormActivity : AppCompatActivity() {
 //                val address = spOrderAddresses.selectedItem.toString()
                 val Address = edtOrderQuantity.text.toString()
                 val uPrice = unitPrice
-                val order = Order( FirebaseAuth.getInstance().currentUser?.uid,"", name, phone, spOrderAddresses.selectedItem.toString(), "", uPrice,Address, tanker.tankerName, tanker.tankerType, "Pending")
+                val order = Order( this.getSharedPreferences("PREFERENCE_NAME", Context.MODE_PRIVATE).getString("id", ""),"", name, phone, spOrderAddresses.selectedItem.toString(), "", uPrice,Address, tanker.tankerName, tanker.tankerType, "Pending")
 //                Toast.makeText(this, "$totalPrice ${spOrderAddresses.selectedItem.toString()}", Toast.LENGTH_SHORT).show()
                 placeOrder(order)
             }

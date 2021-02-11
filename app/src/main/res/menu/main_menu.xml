@@ -9,11 +9,11 @@
         android:title="Orders"
         android:orderInCategory="100"
         />
-    <item
+   <!-- <item
         android:id="@+id/logout"
         android:title="Logout"
         android:orderInCategory="102"
-        />
+        />-->
     <item
         android:id="@+id/callUs"
         android:title="Call Us"

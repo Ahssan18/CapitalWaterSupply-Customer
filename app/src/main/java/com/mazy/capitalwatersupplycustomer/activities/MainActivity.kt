@@ -23,6 +23,8 @@ import com.mazy.capitalwatersupplycustomer.adapters.MainAdapter
 import com.mazy.capitalwatersupplycustomer.interfaces.TankerClickListner
 import com.mazy.capitalwatersupplycustomer.models.Tanker
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(), TankerClickListner{
    private val dbRef = FirebaseDatabase.getInstance().getReference("Tankers")
@@ -101,9 +103,9 @@ class MainActivity : AppCompatActivity(), TankerClickListner{
             R.id.orders->{
                 startActivity(Intent(this, OrdersActivity::class.java))
             }
-            R.id.logout->{
+            /*R.id.logout->{
                 showAlertDialogue()
-            }
+            }*/
             R.id.aboutUs->{
                 startActivity(Intent(this, AboutUsActivity::class.java))
             }
