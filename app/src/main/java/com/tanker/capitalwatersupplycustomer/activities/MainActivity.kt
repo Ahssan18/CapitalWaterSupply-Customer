@@ -25,6 +25,8 @@ import com.tanker.capitalwatersupplycustomer.adapters.MainAdapter
 import com.tanker.capitalwatersupplycustomer.interfaces.TankerClickListner
 import com.tanker.capitalwatersupplycustomer.models.Tanker
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(), TankerClickListner {
     private val dbRef = FirebaseDatabase.getInstance().getReference("Tankers")
