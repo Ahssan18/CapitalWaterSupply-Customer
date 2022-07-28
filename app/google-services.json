@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "896620937475",
-    "firebase_url": "https://water-supply-a2692-default-rtdb.firebaseio.com",
-    "project_id": "water-supply-a2692",
-    "storage_bucket": "water-supply-a2692.appspot.com"
+    "project_number": "671005059405",
+    "firebase_url": "https://tanker-22c50-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "tanker-22c50",
+    "storage_bucket": "tanker-22c50.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:896620937475:android:e12cd80939ab4431fba936",
+        "mobilesdk_app_id": "1:671005059405:android:f9d6712c5dff75e53e6f04",
         "android_client_info": {
-          "package_name": "com.mazy.capitalwatersupplycustomer"
+          "package_name": "com.tanker.capitalwatersupplycustomer"
         }
       },
       "oauth_client": [
         {
-          "client_id": "896620937475-tq010ciku15pahcbmo103ggvcvehuf8b.apps.googleusercontent.com",
+          "client_id": "671005059405-cfn094bnbvm8cdluatmmj8gjbfna5e0b.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.mazy.capitalwatersupplycustomer",
-            "certificate_hash": "844af3af18e53ea2ca984ee9bf200c7bba6ac0e5"
+            "package_name": "com.tanker.capitalwatersupplycustomer",
+            "certificate_hash": "d79ce712c18b2d62fd7dacac0eab67d6e71c7c48"
           }
         },
         {
-          "client_id": "896620937475-hgfp54edmhn2al1ls1fpjeq60dq6rgln.apps.googleusercontent.com",
+          "client_id": "671005059405-c35o6qdhrkjqsu1djoerkjsg2ooedn6f.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAPpipgTFVQOwjp1w2LH4Ljk8RkMlJpito"
+          "current_key": "AIzaSyDN_-sXu1a3yFXwoD_VhkjWcyJcX5a9OUA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "896620937475-hgfp54edmhn2al1ls1fpjeq60dq6rgln.apps.googleusercontent.com",
+              "client_id": "671005059405-c35o6qdhrkjqsu1djoerkjsg2ooedn6f.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,4 +1,4 @@
-package com.mazy.capitalwatersupplycustomer.activities
+package com.tanker.capitalwatersupplycustomer.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.mazy.capitalwatersupplycustomer.R
+import com.tanker.capitalwatersupplycustomer.R
 import com.wajahatkarim3.easyvalidation.core.view_ktx.nonEmpty
 import com.wajahatkarim3.easyvalidation.core.view_ktx.notContains
 import com.wajahatkarim3.easyvalidation.core.view_ktx.validEmail

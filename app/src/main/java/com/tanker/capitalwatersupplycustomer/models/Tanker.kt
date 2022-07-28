@@ -1,4 +1,4 @@
-package com.mazy.capitalwatersupplycustomer.models
+package com.tanker.capitalwatersupplycustomer.models
 
 import java.io.Serializable
 

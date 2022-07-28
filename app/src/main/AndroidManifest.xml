@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mazy.capitalwatersupplycustomer">
+    package="com.tanker.capitalwatersupplycustomer">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/splash"
+        android:exported="true"
+        android:icon="@drawable/splash_tanker"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/splash"
+        android:roundIcon="@drawable/splash_tanker"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.mazy.capitalwatersupplycustomer.AboutUsActivity"></activity>
-        <activity android:name="com.mazy.capitalwatersupplycustomer.activities.OrdersActivity" />
-        <activity android:name="com.mazy.capitalwatersupplycustomer.activities.OrderFormActivity" />
-        <activity android:name="com.mazy.capitalwatersupplycustomer.activities.ForgotPasswordActivity" />
-        <activity android:name="com.mazy.capitalwatersupplycustomer.activities.SignInActivity" />
-        <activity android:name="com.mazy.capitalwatersupplycustomer.activities.SignUpActivity" />
         <activity
-            android:name="com.mazy.capitalwatersupplycustomer.activities.SplashActivity"
+            android:name="com.tanker.capitalwatersupplycustomer.activities.OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tanker.capitalwatersupplycustomer.activities.PhoneNumberActivity"
+            android:exported="false" />
+        <activity android:name="com.tanker.capitalwatersupplycustomer.AboutUsActivity" />
+        <activity android:name="com.tanker.capitalwatersupplycustomer.activities.OrdersActivity" />
+        <activity android:name="com.tanker.capitalwatersupplycustomer.activities.OrderFormActivity" />
+        <activity android:name="com.tanker.capitalwatersupplycustomer.activities.ForgotPasswordActivity" />
+        <activity android:name="com.tanker.capitalwatersupplycustomer.activities.SignInActivity" />
+        <activity android:name="com.tanker.capitalwatersupplycustomer.activities.SignUpActivity" />
+        <activity android:exported="true"
+            android:name="com.tanker.capitalwatersupplycustomer.activities.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +34,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.mazy.capitalwatersupplycustomer.activities.MainActivity" />
+        <activity android:name="com.tanker.capitalwatersupplycustomer.activities.MainActivity" />
     </application>
 
 </manifest>

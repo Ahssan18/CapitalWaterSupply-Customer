@@ -84,6 +84,7 @@
                     android:layout_below="@id/addTankerNameLayout"
                     app:cardBackgroundColor="@color/white">
                     <EditText
+                        android:editable="false"
                         android:id="@+id/edtOrderNumber"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -149,16 +150,16 @@
                     android:layout_marginTop="1dp"
                     android:layout_below="@+id/addAddressLayout"
                     >
+
                     <TextView
                         android:id="@+id/order_tv_up"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Unit Price"
-                        android:textSize="14sp"
                         android:paddingStart="15dp"
+                        android:text="Unit Price"
                         android:textColor="@android:color/black"
-                        />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/order_tv_up_amount"

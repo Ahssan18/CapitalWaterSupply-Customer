@@ -2,25 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn = ".MainActivity"
-    >
-    <item
-        android:id="@+id/orders"
-        android:title="Orders"
-        android:orderInCategory="100"
-        />
+    tools:showIn = ".MainActivity">
     <item
         android:id="@+id/logout"
-        android:title="Logout"
-        android:orderInCategory="102"
-        />
-    <item
-        android:id="@+id/callUs"
-        android:title="Call Us"
-        android:orderInCategory="101"
-        /><item
-        android:id="@+id/aboutUs"
-        android:title=" About  Us"
-        android:orderInCategory="101"
-        />
+        android:title="Logout"/>
 </menu>

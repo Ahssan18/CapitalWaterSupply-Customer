@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2196F3"
+    android:orientation="vertical"
     tools:context=".activities.MainActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="9">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvMain"
             android:layout_width="match_parent"
@@ -30,4 +33,53 @@
             android:visibility="gone"
             />
     </RelativeLayout>
-</RelativeLayout>
+    <LinearLayout
+        android:background="#64B1EF"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight=".8">
+        <TextView
+            android:drawableStart="@drawable/ic_menu"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:textColor="#FFF"
+            android:textSize="10dp"
+            android:id="@+id/tv_orders"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:text="Orders"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <View
+            android:layout_height="match_parent"
+            android:background="#FFF" android:layout_width="1dp"/>
+        <TextView
+            android:drawableStart="@drawable/ic_info"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:textColor="#FFF"
+            android:id="@+id/tv_Aboutus"
+            android:gravity="center"
+            android:text="About us"
+            android:textSize="10dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <View
+            android:layout_height="match_parent"
+            android:background="#FFF" android:layout_width="1dp"/>
+        <TextView
+            android:drawableStart="@drawable/ic_phone"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:textColor="#FFF"
+            android:id="@+id/tv_callus"
+            android:gravity="center"
+            android:text="Call"
+            android:textSize="10dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

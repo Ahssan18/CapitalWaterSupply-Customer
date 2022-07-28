@@ -1,14 +1,15 @@
-package com.mazy.capitalwatersupplycustomer.activities
+package com.tanker.capitalwatersupplycustomer.activities
 
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
@@ -17,30 +18,53 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.mazy.capitalwatersupplycustomer.AboutUsActivity
-import com.mazy.capitalwatersupplycustomer.R
-import com.mazy.capitalwatersupplycustomer.adapters.MainAdapter
-import com.mazy.capitalwatersupplycustomer.interfaces.TankerClickListner
-import com.mazy.capitalwatersupplycustomer.models.Tanker
+import com.tanker.capitalwatersupplycustomer.AboutUsActivity
+import com.tanker.capitalwatersupplycustomer.R
+import com.tanker.capitalwatersupplycustomer.Utils
+import com.tanker.capitalwatersupplycustomer.adapters.MainAdapter
+import com.tanker.capitalwatersupplycustomer.interfaces.TankerClickListner
+import com.tanker.capitalwatersupplycustomer.models.Tanker
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), TankerClickListner{
-   private val dbRef = FirebaseDatabase.getInstance().getReference("Tankers")
-    private lateinit var adapter : MainAdapter
-    private lateinit var adminNumber:String
+class MainActivity : AppCompatActivity(), TankerClickListner {
+    private val dbRef = FirebaseDatabase.getInstance().getReference("Tankers")
+    private lateinit var adapter: MainAdapter
+    private lateinit var adminNumber: String
+    private lateinit var utils: Utils
+    private lateinit var order: TextView
+    private lateinit var call: TextView
+    private lateinit var aboutUs: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val toolbar= supportActionBar
-        toolbar?.title="Capital Water Supply"
+        order=findViewById(R.id.tv_orders)
+        call=findViewById(R.id.tv_callus)
+        aboutUs=findViewById(R.id.tv_Aboutus)
+        val toolbar = supportActionBar
+        toolbar?.title = "Capital Water Supply"
         mainPB.visibility = View.VISIBLE
-
+        utils = Utils(this);
         val manager = GridLayoutManager(this, 2)
         rvMain.layoutManager = manager
         adapter = MainAdapter(this)
         rvMain.adapter = adapter
         getTankers()
+        clickListeners()
         getAdminNumber()
+    }
+
+    private fun clickListeners() {
+        order.setOnClickListener {
+            startActivity(Intent(this, OrdersActivity::class.java))
+        }
+        call.setOnClickListener {
+            if(checkPermission()){
+                callPhone()
+            }
+        }
+        aboutUs.setOnClickListener {
+            startActivity(Intent(this, AboutUsActivity::class.java))
+        }
     }
 
     private fun getAdminNumber() {
@@ -98,20 +122,14 @@ class MainActivity : AppCompatActivity(), TankerClickListner{
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.orders->{
-                startActivity(Intent(this, OrdersActivity::class.java))
-            }
+
             R.id.logout->{
-                showAlertDialogue()
+                utils.logoutUser()
+                startActivity(Intent(this@MainActivity,SplashActivity::class.java))
+                finish()
             }
-            R.id.aboutUs->{
-                startActivity(Intent(this, AboutUsActivity::class.java))
-            }
-            R.id.callUs->{
-                if(checkPermission()){
-                    callPhone()
-                }
-            }
+
+
         }
 
         return super.onOptionsItemSelected(item)

@@ -1,4 +1,4 @@
-package com.mazy.capitalwatersupplycustomer;
+package com.tanker.capitalwatersupplycustomer;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,4 +1,4 @@
-package com.mazy.capitalwatersupplycustomer.models
+package com.tanker.capitalwatersupplycustomer.models
 
 data class Order(
     var userId: String?= null,

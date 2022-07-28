@@ -1,12 +1,12 @@
-package com.mazy.capitalwatersupplycustomer.adapters
+package com.tanker.capitalwatersupplycustomer.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.mazy.capitalwatersupplycustomer.R
-import com.mazy.capitalwatersupplycustomer.interfaces.TankerClickListner
-import com.mazy.capitalwatersupplycustomer.models.Tanker
+import com.tanker.capitalwatersupplycustomer.R
+import com.tanker.capitalwatersupplycustomer.interfaces.TankerClickListner
+import com.tanker.capitalwatersupplycustomer.models.Tanker
 import kotlinx.android.synthetic.main.main_item_layout.view.*
 
 

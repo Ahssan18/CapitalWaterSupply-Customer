@@ -1,7 +1,7 @@
-package com.mazy.capitalwatersupplycustomer.interfaces
+package com.tanker.capitalwatersupplycustomer.interfaces
 
 import android.view.View
-import com.mazy.capitalwatersupplycustomer.models.Tanker
+import com.tanker.capitalwatersupplycustomer.models.Tanker
 
 interface TankerClickListner {
 

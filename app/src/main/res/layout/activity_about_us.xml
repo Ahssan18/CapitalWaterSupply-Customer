@@ -39,52 +39,33 @@
             android:layout_height="match_parent">
             <TextView
                 android:layout_width="match_parent"
-                android:text="Our Other Services"
-                android:textStyle="bold"
-                android:layout_height="match_parent"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:text="1 : Rent A Car"
-                android:textStyle="bold"
-                android:layout_height="match_parent"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:text="2 : Water Tank Cleaning "
-                android:textStyle="bold"
-                android:layout_height="match_parent"/>
-            <TextView
-                android:layout_marginTop="40dp"
-                android:layout_width="match_parent"
-                android:text="Our Online Paymnt Accounts: "
-                android:textStyle="bold"
-                android:layout_height="match_parent"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:text="Customer Service: 03334050857"
-                android:textStyle="bold"
-                android:layout_height="match_parent"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:text="03007743968"
+                android:text="Tanker Walaa is a hyper local quality water delivery service operating in the twin cities. "
                 android:textStyle="bold"
                 android:layout_height="match_parent"/>
             <TextView
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
-                android:text="Jazz Cash : 03334050857"
-                android:textStyle="bold"
-                android:layout_height="match_parent"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:text="HBL Bank Account : 08027900643103"
+                android:text="Customers can simply order the water tanker through the Tanker Walaa Website, Mobile App, or just simply calling the customer care contact number"
                 android:textStyle="bold"
                 android:layout_height="match_parent"/>
             <TextView
                 android:layout_marginTop="40dp"
                 android:layout_width="match_parent"
-                android:text="Address: Soan Garden Islamabad,Pakistan"
+                android:text="For Queries and Buisness Inqueries Contact Us at  "
                 android:textStyle="bold"
                 android:layout_height="match_parent"/>
+            <TextView
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:text="0302-0428181"
+                android:textStyle="bold"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="sales@tankerwalaa.com"
+                android:textStyle="bold"
+                android:layout_height="match_parent"/>
+
         </LinearLayout>
 
     </ScrollView>

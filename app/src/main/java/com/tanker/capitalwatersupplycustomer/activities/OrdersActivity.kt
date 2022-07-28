@@ -1,22 +1,23 @@
-package com.mazy.capitalwatersupplycustomer.activities
+package com.tanker.capitalwatersupplycustomer.activities
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.mazy.capitalwatersupplycustomer.R
-import com.mazy.capitalwatersupplycustomer.adapters.OrdersAdapter
-import com.mazy.capitalwatersupplycustomer.models.Order
+import com.tanker.capitalwatersupplycustomer.R
+import com.tanker.capitalwatersupplycustomer.adapters.OrdersAdapter
+import com.tanker.capitalwatersupplycustomer.models.Order
 import kotlinx.android.synthetic.main.activity_orders.*
 
 class OrdersActivity : AppCompatActivity() {
 
     private  lateinit var adapter: OrdersAdapter
+    private var id:String=""
     private val dbOrderRef = FirebaseDatabase.getInstance().getReference("Orders")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,7 @@ class OrdersActivity : AppCompatActivity() {
         ordersRV.layoutManager = manager
         adapter = OrdersAdapter()
         ordersRV.adapter = adapter
+
         getOrders()
     }
 
@@ -43,7 +45,7 @@ class OrdersActivity : AppCompatActivity() {
         super.onBackPressed()
     }
     private fun getOrders(){
-     dbOrderRef.child(FirebaseAuth.getInstance().currentUser?.uid!!).addValueEventListener(object : ValueEventListener{
+     dbOrderRef.child(this.getSharedPreferences("PREFERENCE_NAME", Context.MODE_PRIVATE).getString("id", "").toString()).addValueEventListener(object : ValueEventListener{
          override fun onDataChange(snapshot: DataSnapshot) {
              if(snapshot.exists()){
                  OrdersPB.visibility = View.GONE
